@@ -6,20 +6,34 @@
 // let digit contains each digit of the isbn
 // index of each digit >> isbn[i]
 
-function validISBN10(isbn) {
-    weighted_sum = 0;
-    for (var i = 1; i <= 10; i++) {
-        let digit = isbn[i-1];
-        console.log(weighted_sum += digit * i);
-        console.log(digit);
-    }
-    var last_digit = "Last Digit is " + isbn[9];
-   console.log(weighted_sum % 11);
-   console.log(last_digit);
-}
 
-var isbn= "111222333x";
-validISBN10(isbn);
+function validISBN10(isbn) {
+
+    var weighted_sum = 0, i, digit;
+    if (isbn.length < 10) {
+        return "ISBN is less than 10";
+    }
+    if(isbn.includes("X") || isbn.includes("x")) {
+        isbn = isbn.split(""); // Convert it to Array
+        isbn.pop(); // Remove the "X"
+        isbn.push("10"); // Replace it with 10
+    }
+    for (i = 0; i < 10; i++) {
+        digit = isbn[i];
+        weighted_sum += digit * (i+1);
+    }
+
+    if(weighted_sum % 11 == 0) {
+        return true;
+    }
+    else {
+        return false
+    }
+}
+var isbn= "123456789x";
+console.log(validISBN10(isbn));
+
+
 
 
 
