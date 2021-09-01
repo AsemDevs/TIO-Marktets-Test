@@ -18,22 +18,46 @@
 
                 <!-- Tab links -->
                 <div class="tab">
-                    <button class="tablinks" onclick="openChapter(event, 'js')">JavaScript</button>
+                    <button class="tablinks active" onclick="openChapter(event, 'js')">JavaScript</button>
                     <button class="tablinks" onclick="openChapter(event, 'php')">PHP</button>
                     <button class="tablinks" onclick="openChapter(event, 'react')">React.js</button>
                 </div>
                 
                 <!-- Tab content -->
-                <div id="js" class="Chapter tabcontent">
+                <div id="js" class="Chapter active tabcontent" style="display: block;">
                     <div class="container">
                         <h2>Js</h2>
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="tab">
-                                <button class="tablinks" onclick="openExercise(event, 'ex1')">Exercise-1</button>
+                                <button class="tablinks active" onclick="openExercise(event, 'ex1')">Exercise-1</button>
                                 <button class="tablinks" onclick="openExercise(event, 'ex2')">Exercise-2</button>
                             </div>
-                            <div id="ex1" class="Exercise tabcontent">
-                                <h3>Exercise-1</h3>
+                            <div id="ex1" class="Exercise active tabcontent" style="display: block;">
+                                
+                                <div class="container">
+                                    
+                                    <div class="row">
+                                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                            <h3>Exercise-1</h3>
+                                            <button type="button" class="btn btn-primary" onclick='isbn_input()'>Run Ex-1</button>
+                                            <p class = "text-primary mt-4" id="isbn_value"></p>
+                                        </div>
+                                        
+                                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                            <h3>Examples</h3>
+                                            <ul class="list-group">
+                                                <li class="list-group-item">1112223339</li>
+                                                <li class="list-group-item">111222333</li>
+                                                <li class="list-group-item">1112223339X</li>
+                                                <li class="list-group-item">1234554321</li>
+                                                <li class="list-group-item">1234512345</li>
+                                                <li class="list-group-item">048665088X</li>
+                                                <li class="list-group-item">X123456788</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
                             </div>
                             <div id="ex2" class="Exercise tabcontent">
                                 <h3>Exercise-2</h3>
