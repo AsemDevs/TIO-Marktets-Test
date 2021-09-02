@@ -48,8 +48,8 @@ if(document.getElementById("ex2") != null ) {
     function n_input() {
         var n = prompt("Please enter Number");
         if (n != null) {
-            document.getElementById("ex2_result").innerHTML =
-             n + " is " + sumSquare(n);
+            document.getElementById("ex2_result").innerHTML = "Check the Console";
+            sumSquare(n);
           }
     }
 
@@ -60,6 +60,7 @@ if(document.getElementById("ex2") != null ) {
         let all2 = new Array();
         let all = new Array();
         let output1 = [];
+        let outputAll = [];
         let output2 = [];
         let count = 0;
         for (i = 0; i * i <= n; i++) {
@@ -75,11 +76,11 @@ if(document.getElementById("ex2") != null ) {
         for (let k = 0; k < count/2; k++) { // count/2 to take unique pairs only
             output1.push(all1[k])
             output2.push(all2[k])
-            console.log(output1[k], output2[k]);
+            console.log([output1[k], output2[k]]);
             all.push([output1[k], output2[k]]);
             // all.push([output2[k]]);
         }
-        console.log(all)
+        console.log("2D Array = ", all);
     } 
 }
 
