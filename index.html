@@ -163,39 +163,73 @@
                         </div>
                     </div>
                 </div>
-                
                 <div id="react" class="Chapter tabcontent">
                     <div class="container">
                         <h2>React.js</h2>
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="tab">
-                                <button class="tablinks" onclick="openExercise(event, 'react.ex1')">a</button>
-                                <button class="tablinks" onclick="openExercise(event, 'react.ex2')">b</button>
-                                <button class="tablinks" onclick="openExercise(event, 'react.ex3')">c</button>
-                                <button class="tablinks" onclick="openExercise(event, 'react.ex4')">e</button>
+                                <button class="tablinks" onclick="openExercise(event, 'react.a')">a</button>
+                                <button class="tablinks" onclick="openExercise(event, 'react.b')">b</button>
+                                <button class="tablinks" onclick="openExercise(event, 'react.c')">c</button>
+                                <button class="tablinks" onclick="openExercise(event, 'react.d')">e</button>
+                                <button class="tablinks" onclick="openExercise(event, 'react.exercise')">Exercise</button>
                             </div>
-                            <div id="react.ex1" class="Exercise tabcontent">
-                                <h3>a</h3>
+                            <div id="react.a" class="Exercise tabcontent">
+                                <h3>a:</h3>
+                                <p><span class="text-info">Props</span> are like function arguments in javascript that can be passed into react components</p>
+                                <p>Props are passed components via HTML attributes</p>
+                                <p> you can use <span class="text-info">Props</span> to pass data & event handlers down to your child components.</p>
+                                <p><span class="text-info">State</span> is where you store property values that belongs to the component, when the <span class="text-info">state</span> object changes, the component re-renders.</p>
+                                <p> you can use <span class="text-info">State</span> to store the data your current page needs in your controller-view.</p>
                             </div>
-                            <div id="react.ex2" class="Exercise tabcontent">
-                                <h3>b</h3>
+                            <div id="react.b" class="Exercise tabcontent">
+                                <h3>b:</h3>
+                                <p>Just like javascript or DOM has event handling, react has event handling system known as Synthetic events and it is a is a cross-browser wrapper of the browser's native event.</p>
+                                <h3>Example</h3>
+                                <pre>
+<code>
+function ActionLink() {
+    function handleClick(e) {  
+        e.preventDefault();  
+        console.log('You had clicked a Link.');  
+    }  
+    return (  
+        <a href="#" onClick={handleClick}>Click_Me</a>
+    )
+}  
+</code>
+                            </pre>
                             </div>
-                            <div id="react.ex3" class="Exercise tabcontent">
-                                <h3>c</h3>
+                            <div id="react.c" class="Exercise tabcontent">
+                                <h3>c:</h3>
+                                <h3>Example</h3>
+                                <p><span class="text-info">Portals</span> provide a first-class way to render children into a DOM node that exists outside the DOM hierarchy of the parent component.</p>
+                                <pre>
+<code>
+    render() {
+        return ReactDOM.createPortal(
+          this.props.children,
+          domNode
+        );
+      }
+</code>
+                                </pre>
                             </div>
-                            <div id="react.ex4" class="Exercise tabcontent">
-                                <h3>e</h3>
+                            <div id="react.d" class="Exercise tabcontent">
+                                <h3>d:</h3>
+                                <p>If you use setState in constructor you would get <span class="text-danger">error</span> like this:Can only update a mounted or mounting component. This usually means you called setState() on an unmounted component.</p>
+                            </div>
+                            <div id="react.exercise" class="Exercise tabcontent">
+                                <h3>Exercise</h3>
+                                <p>If you use setState in constructor you would get <span class="text-danger">error</span> like this:Can only update a mounted or mounting component. This usually means you called setState() on an unmounted component.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
-        
     </div>
     
-    <!-- Latest compiled and minified JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js.js"></script>
