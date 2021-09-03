@@ -72,12 +72,38 @@
                         <h2>PHP</h2>
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="tab">
+                                <button class="tablinks" onclick="openExercise(event, 'php.a')">a</button>
+                                <button class="tablinks" onclick="openExercise(event, 'php.b')">b</button>
+                                <button class="tablinks" onclick="openExercise(event, 'php.c')">c</button>
+                                <button class="tablinks" onclick="openExercise(event, 'php.d')">d</button>
                                 <button class="tablinks" onclick="openExercise(event, 'php.ex1')">Exercise-1</button>
                                 <button class="tablinks" onclick="openExercise(event, 'php.ex2')">Exercise-2</button>
                                 <button class="tablinks" onclick="openExercise(event, 'php.ex3')">Exercise-3</button>
                             </div>
+                            <div id="php.a" class="Exercise tabcontent">
+                                <h3>a:</h3>
+                                <p>It is all about how critical the file being called to the rest of the script.
+                                    For Example: <span class="text-info">Include</span> will raise a warning and the script will continue anyways.
+                                    Whereas <span class="text-info">require</span> will raise a fatal error.
+                                    so if the file being called is critical for the rest of the script we need to use <span class="text-info">require</span>
+                                </p>
+                            </div>
+                            <div id="php.b" class="Exercise tabcontent">
+                                <h3>b:</h3>
+                                <pre><code>echo 'User IP Address : '. $_SERVER['REMOTE_ADDR'];</code></pre>
+                            </div>
+                            <div id="php.c" class="Exercise tabcontent">
+                                <h3>c</h3>
+                                <p>it outputs <span class="text-info">21, 21</span></p>
+                                <a class="btn btn-info" href="https://asemdevs.github.io/TIO-Marktets-Test/php-c.php" role="button">Check Code in Github</a>
+                            </div>
+                            <div id="php.d" class="Exercise tabcontent">
+                                <h3>d</h3>
+                            </div>
                             <div id="php.ex1" class="Exercise tabcontent">
                                 <h3>Exercise-1</h3>
+                                
+                                <a class="btn btn-info" href="https://asemdevs.github.io/TIO-Marktets-Test/php-ex1.php" role="button">Check Code in Github</a>
                             </div>
                             <div id="php.ex2" class="Exercise tabcontent">
                                 <h3>Exercise-2</h3>
