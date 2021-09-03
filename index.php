@@ -94,6 +94,12 @@
                             </div>
                             <div id="php.c" class="Exercise tabcontent">
                                 <h3>c</h3>
+                                <?php
+                                    $a = '1'; // assigning '1' to variable a
+                                    $b = &$a;   // both variable are pointing to the same data >> b == 1
+                                    $b = "2$b"; // since they point to same data, b == 21 and a will also equal 21
+                                    echo $a.", ".$b; // output 21, 21
+                                ?>
                                 <p>it outputs <span class="text-info">21, 21</span></p>
                                 <a class="btn btn-info" href="https://github.com/AsemDevs/TIO-Marktets-Test/blob/test/php-c.php" role="button">Check Code in Github</a>
                             </div>
@@ -102,6 +108,7 @@
                             </div>
                             <div id="php.ex1" class="Exercise tabcontent">
                                 <h3>Exercise-1</h3>
+
                                 
                                 <a class="btn btn-info" href="https://github.com/AsemDevs/TIO-Marktets-Test/blob/test/php-ex1.php" role="button">Check Code in Github</a>
                             </div>
