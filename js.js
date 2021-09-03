@@ -60,7 +60,6 @@ if(document.getElementById("ex2") != null ) {
         let all2 = new Array();
         let all = new Array();
         let output1 = [];
-        let outputAll = [];
         let output2 = [];
         let count = 0;
         for (i = 0; i * i <= n; i++) {
