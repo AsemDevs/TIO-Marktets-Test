@@ -18,7 +18,7 @@
 
                 <!-- Tab links -->
                 <div class="tab">
-                    <button class="tablinks active" onclick="openChapter(event, 'js')">JavaScript</button>
+                    <button class="tablinks active" onclick="openChapter(event, 'js')" id="defaultOpen">JavaScript</button>
                     <button class="tablinks" onclick="openChapter(event, 'php')">PHP</button>
                     <button class="tablinks" onclick="openChapter(event, 'react')">React.js</button>
                 </div>
@@ -74,7 +74,7 @@
                         <h2>PHP</h2>
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="tab">
-                                <button class="tablinks" onclick="openExercise(event, 'php.a')">a</button>
+                                <button class="tablinks active" onclick="openExercise(event, 'php.a')">a</button>
                                 <button class="tablinks" onclick="openExercise(event, 'php.b')">b</button>
                                 <button class="tablinks" onclick="openExercise(event, 'php.c')">c</button>
                                 <button class="tablinks" onclick="openExercise(event, 'php.d')">d</button>
@@ -82,7 +82,7 @@
                                 <button class="tablinks" onclick="openExercise(event, 'php.ex2')">Exercise-2</button>
                                 <button class="tablinks" onclick="openExercise(event, 'php.ex3')">Exercise-3</button>
                             </div>
-                            <div id="php.a" class="Exercise tabcontent">
+                            <div id="php.a" class="Exercise active tabcontent" style="display: block;">
                                 <h3>a:</h3>
                                 <p>It is all about how critical the file being called to the rest of the script.
                                     For Example: <span class="text-info">Include</span> will raise a warning and the script will continue anyways.
@@ -168,13 +168,13 @@
                         <h2>React.js</h2>
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="tab">
-                                <button class="tablinks" onclick="openExercise(event, 'react.a')">a</button>
+                                <button class="tablinks active" onclick="openExercise(event, 'react.a')">a</button>
                                 <button class="tablinks" onclick="openExercise(event, 'react.b')">b</button>
                                 <button class="tablinks" onclick="openExercise(event, 'react.c')">c</button>
                                 <button class="tablinks" onclick="openExercise(event, 'react.d')">e</button>
                                 <button class="tablinks" onclick="openExercise(event, 'react.exercise')">Exercise</button>
                             </div>
-                            <div id="react.a" class="Exercise tabcontent">
+                            <div id="react.a" class="Exercise active tabcontent" style="display: block;">
                                 <h3>a:</h3>
                                 <p><span class="text-info">Props</span> are like function arguments in javascript that can be passed into react components</p>
                                 <p>Props are passed components via HTML attributes</p>

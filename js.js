@@ -18,10 +18,8 @@ if(document.getElementById("ex1") != null ) {
     }
     function validISBN10(isbn) {
         var weighted_sum = 0, i, digit;
-        if (isbn.length < 10) {
-            return "less than 10";
-        }else if(isbn.length > 10) {
-            return "greater than 10";
+        if (isbn.length != 10) {
+            return false
         }
         if(isbn.includes("X") || isbn.includes("x")) {
             isbn = isbn.split(""); // Convert it to Array
@@ -148,3 +146,4 @@ function openExercise(evt, Exercise) {
     document.getElementById(Exercise).style.display = "block";
     evt.currentTarget.className += " active";
 }
+document.getElementById("defaultOpen").click();
